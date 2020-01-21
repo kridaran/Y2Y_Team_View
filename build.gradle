@@ -1,0 +1,43 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+    id 'war'
+}
+
+group 'com.kov'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+//    ______________________________________________________________________________________________________________
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+//    ______________________________________________________________________________________________________________
+
+    compile(
+            'junit:junit:3.8.1',
+            'org.springframework:spring-context:4.3.10.RELEASE',
+            'org.springframework:spring-webmvc:4.3.10.RELEASE',
+            'org.springframework:spring-context-support:4.3.9.RELEASE',
+            'org.freemarker:freemarker:2.3.23',
+            'javax.servlet:javax.servlet-api:3.1.0',
+            'org.springframework:spring-jdbc:4.3.10.RELEASE',
+            'mysql:mysql-connector-java:8.0.13'
+    )
+}
+
+war {
+    archiveName 'Root.war'
+}
+

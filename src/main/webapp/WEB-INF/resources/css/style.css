@@ -1,0 +1,327 @@
+*{
+    --color_fg: rgb(245, 245, 245);
+    --color_bg: rgb(34, 34, 34);
+    --color_body: rgb(250, 250, 250);
+    --color_select: rgb(1, 175, 228);
+    --color_shadow: rgb(180, 180, 180);
+    --color_warning: rgb(205, 45, 50);
+
+    --font_huge: 64px;
+    --font_big: 48px;
+    --font_mid: 32px;
+    --font_small: 20px;
+    --fontS_main: Calibri;
+    --fontS_light: Calibri Light;
+
+    font-family: var(--fontS_main);
+}
+
+body{
+    background-color: var(--color_body);
+    overflow-y: scroll;
+    margin: 0;
+}
+
+button:focus{outline: 0}
+
+.warning{
+    color: var(--color_warning);
+    font-size: var(--font_mid);
+}
+
+.bigBut{
+    transition: 0.2s;
+    font-size: var(--font_big);
+    border: none;
+    background-color: var(--color_body);
+    margin-bottom: 1%;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.bigBut:hover{
+    transition: 0.2s;
+    font-size: var(--font_big);
+    border: none;
+    background-color: var(--color_bg);
+    color: var(--color_fg);
+}
+
+.textInput{
+    transition: 0.2s;
+    font-size: var(--font_mid);
+    font-family: var(--fontS_light);
+    border: 0;
+    box-shadow: 0 3px  7px var(--color_shadow);
+    padding: 0 3px;
+
+}
+
+.textInput:hover{
+    box-shadow: 0 6px 10px var(--color_shadow);
+}
+
+::placeholder{
+    color: var(--color_shadow);
+}
+
+
+/*__________________________________________________________________________________________L O G   I N___________________________________________________________________________________*/
+
+.loginForm{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.loginForm p{
+    font-size: var(--font_mid);
+}
+
+/*__________________________________________________________________________________________L O G   I N___________________________________________________________________________________*/
+
+
+
+
+
+
+
+/*__________________________________________________________________________________________C O M A N D   F I E L D___________________________________________________________________________________*/
+
+#commandList{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.studentField{
+    transition: 0.2s;
+    border: 2px var(--color_bg) solid;
+    border-radius: 5px;
+    min-width: 15%;
+    margin: 0.5%;
+}
+
+.studentField p{
+    font-size: var(--font_mid);
+    font-family: var(--fontS_light);
+    margin: 0 5px;
+}
+
+.butDeleteStudent{
+    transition: 0.2s;
+    width: 100%;
+    font-size: var(--font_small);
+    font-family: var(--fontS_main);
+    background-color: var(--color_bg);
+    color: var(--color_fg);
+    border: none;
+    border-radius: 2px;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+.butDeleteStudent:hover{
+    transition: 0.2s;
+    background-color: var(--color_select);
+}
+/*__________________________________________________________________________________________C O M A N D   F I E L D___________________________________________________________________________________*/
+
+
+
+
+
+
+
+/*__________________________________________________________________________________________ N E W   S T U D E N T   F O R M___________________________________________________________________________________*/
+
+
+.addStudent{
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    border: 2px var(--color_bg) solid;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.dropDownMenu{
+    position: relative;
+    display: inline-block;
+    width: 30%;
+}
+
+.dropBut{
+    transition: 0.2s;
+    width: 100%;
+    border: none;
+    background-color: var(--color_bg);
+    color: var(--color_fg);
+    padding: 16px;
+    font-size: var(--font_mid);
+    margin-bottom: 2px;
+}
+
+.dropContent{
+    display: none;
+    position: absolute;
+    background-color: var(--color_bg);
+    color: var(--color_fg);
+    width: 100%;
+    z-index: 1;
+}
+
+.dropContenrShown{
+    display: block;
+
+}
+
+.dropContentShown button{
+    transition: 0.2s;
+    display: block;
+
+    border: none;
+    background-color: var(--color_bg);
+    color: var(--color_fg);
+
+    font-size: var(--font_mid);
+    font-family: var(--fontS_light);
+
+    width: 100%;
+}
+
+.dropContentShown button:hover{
+    transition: 0.2s;
+    background-color: var(--color_select);
+}
+
+
+.dropDownMenu:hover .dropBut{
+    transition: 0.2s;
+    background-color: var(--color_select);
+}
+
+/*__________________________________________________________________________________________ N E W   S T U D E N T   F O R M___________________________________________________________________________________*/
+
+
+
+
+
+
+/*__________________________________________________________________________________________R E S U L T   T A B L E___________________________________________________________________________________*/
+
+table{
+    font-weight: bold;
+    font-size: var(--font_mid);
+}
+
+.tableResult{
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color_fg);
+    border-collapse: collapse;
+}
+
+.tableResult td{
+    width: 19%;
+    border: 1px solid var(--color_bg);
+    font-weight: bold;
+}
+
+.tableResult p{
+    margin: 5px;
+}
+
+.tableResult li{
+    font-family: var(--fontS_light);
+    font-weight: normal;
+    font-size: var(--font_small);
+}
+
+.tableResult ol{
+    margin: 20px;
+}
+
+/*__________________________________________________________________________________________R E S U L T   T A B L E___________________________________________________________________________________*/
+
+
+
+
+
+
+
+/*__________________________________________________________________________________________G R O U P   E D I T I N G___________________________________________________________________________________*/
+
+#groupNameContainer{
+    font-size: var(--font_huge);
+    margin-top: 3%;
+    margin-bottom: 0;
+}
+
+#groupNameContainer p{
+    margin-bottom: 0;
+}
+
+#groupNameContainer input{
+    margin-bottom: 5%;
+}
+
+/*__________________________________________________________________________________________G R O U P   E D I T I N G___________________________________________________________________________________*/
+
+
+.confirmWindowContainer{
+    top: 0;
+    padding-top: 5%;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.confirmWindow{
+    color: var(--color_fg);
+    background-color: var(--color_bg);
+    padding: 20px 17px;
+    border-radius: 15px;
+    font-size: var(--font_mid);
+    width: 60%;
+    margin: auto;
+}
+
+.confirmWindowBorder{
+    padding: 20px 0;
+    width: 100%;
+    border-top: 1px solid var(--color_fg);
+    border-bottom: 1px solid var(--color_fg);
+    border-radius: 15px;
+}
+
+.confirmWindow p{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: var(--fontS_light);
+}
+
+.confirmWindow h1{
+    font-size: var(--font_big);
+    margin: 0;
+    font-family: var(--fontS_main);
+}
+
+.confirmWindow button{
+    font-size: var(--font_big);
+    background-color: var(--color_bg);
+    color: var(--color_fg);
+    font-family: var(--fontS_light);
+}
+
+.confirmWindow button:hover{
+    font-size: var(--font_big);
+    background-color: var(--color_body);
+    color: var(--color_bg);
+}
